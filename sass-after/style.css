@@ -1,0 +1,58 @@
+/*================== Section code==================*/
+#freshcode-code-box .freshcode-tag {
+  line-height: 0.5em; }
+
+.freshcode-alert {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  border-radius: 15px;
+  padding: 10px;
+  direction: ltr;
+  text-align: left; }
+
+pre[class*="language-"].freshcode-code-box {
+  border-radius: 15px;
+  padding: 10px;
+  background: var(--sp-gradient1);
+  margin-top: 20px; }
+  pre[class*="language-"].freshcode-code-box.line-numbers {
+    padding-left: 3.8em; }
+  pre[class*="language-"].freshcode-code-box code {
+    background: #f5f2f0;
+    width: 100%;
+    display: block;
+    padding: 10px; }
+
+.freshcode-line-box {
+  display: flex;
+  justify-content: center; }
+  .freshcode-line-box .freshcode-box {
+    background: var(--sp-gradient1);
+    color: #fff;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-right: 15px;
+    position: relative; }
+    .freshcode-line-box .freshcode-box:after {
+      position: absolute;
+      content: '';
+      background: #000;
+      width: 5px;
+      height: 40px;
+      bottom: -40px; }
+    .freshcode-line-box .freshcode-box.freshcode-remove-line:after {
+      display: none; }
+    .freshcode-line-box .freshcode-box.freshcode-rotate-line:after {
+      rotate: 30deg;
+      left: -9px;
+      height: 50px;
+      bottom: -44px; }
+
+/*================== Section code End==================*/
+
+/*# sourceMappingURL=style.css.map */
