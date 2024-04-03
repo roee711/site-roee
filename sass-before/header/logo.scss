@@ -1,0 +1,14 @@
+body {
+  .header {
+    .logo {
+      h4.site-title {
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 24px;
+      }
+      a{
+        font-size: 24px;
+      }
+    }
+  }
+}

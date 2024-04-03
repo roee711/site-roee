@@ -1,0 +1,21 @@
+.nav-area {
+  .av-columns-area {
+    flex-direction: row-reverse;
+  }
+  .theme-menu {
+    flex-direction: row-reverse;
+  }
+  .menubar {
+    .dropdown-menu {
+      text-align: right;
+      background: var(--sp-gradient2)
+    }
+  }
+}
+
+
+
+
+
+
+

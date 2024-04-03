@@ -1,0 +1,17 @@
+.header-search-popup {
+
+  .search-form {
+    top: 30%;
+    max-width: 800px;
+
+    .search-submit {
+      left: 0px;
+      right: revert;
+
+    }
+  }
+  .header-search-close {
+    left: 100px;
+    right: revert;
+  }
+}

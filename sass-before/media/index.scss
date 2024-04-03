@@ -1,0 +1,129 @@
+@media (max-width:1024px){
+  .freshcode-cat li{
+    flex: 0 10 49%;
+    max-width: 50%;
+  }
+  .flex-item{
+    display: inherit;
+  }
+
+  .freshcode-cat li{
+    flex: 0 10 100%;
+    max-width: 100%;
+  }
+  .post-items.mb-6{
+    margin-bottom: 1.5rem;
+  }
+  .link-read-more a{
+    width: 60%;
+  }
+  .post-content .post-title{
+    font-size: 20px;
+  }
+  .post-footer p.link-read-more{
+    display: inherit;
+  }
+  .post-footer{
+    padding-bottom: 0px;
+  }
+  .post-content .post-title ,  .category .post-footer{
+    text-align: center;
+  }
+
+  body{
+    #breadcrumb-section {
+      padding: 0px;
+      &.breadcrumb-right {
+        .breadcrumb-heading {
+          h1{
+            font-size: 22px;
+          }
+        }
+        .breadcrumb-list {
+          max-width: 100%;
+
+          &:before {
+            width: 100%;
+            border-radius: 0px;
+          }
+        }
+      }
+    }
+    &.single ,&.archive  {
+   /*   #breadcrumb-section {
+
+        &.breadcrumb-right {
+          .breadcrumb-list {
+            &:before {
+              width: 100%;
+              border-radius: 0px;
+            }
+          }
+        }
+      }*/
+        .post-content {
+          .post-date, .cat-links, .tag-links {
+            display: none;
+          }
+
+          .post-footer {
+            p {
+              max-width: 100%;
+
+
+              &.link-read-more {
+                display: initial;
+
+              }
+            }
+          }
+        }
+
+      }
+    .post-items {
+      p {
+        margin-bottom: 15px;
+      }
+    }
+
+      .av-py-default {
+        padding: 20px 0;
+      }
+    .header .logo h4.site-title{
+      font-size: 22px;
+    }
+    }
+
+}
+@media screen and (max-width: 767px){
+  .freshcode-connection{
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 580px){
+  .logo a, .mobile-logo a, .site-title{
+    font-size: 24px;
+  }
+  .breadcrumb-right .breadcrumb-heading h1{
+    font-size: 19px;
+  }
+  h2{
+    font-size: 22px;
+    text-align: center;
+  }
+  pre[class*="language-"].freshcode-code-box{
+    background: #f5f2f0;
+  }
+  .post-content {
+    padding: 15px;
+  }
+  #breadcrumb-section{
+    padding: 0px;
+  }
+  body {
+    .breadcrumb-list {
+        padding: 13px 15px 13px 0px;
+    }
+  }
+}

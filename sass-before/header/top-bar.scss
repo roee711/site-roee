@@ -1,0 +1,13 @@
+#above-header {
+  .widget-right {
+    .widget {
+      &:last-child:not(:first-child) {
+        padding-right: 15px;
+      }
+
+      .contact-area {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+.wpcf7 {
+  label {
+    font-weight: bold;
+    color: #fff;
+  }
+  .wpcf7-submit{
+    background: #000;
+    font-size: 15px;
+    max-width: 250px;
+    width: 100%;
+    margin: 20px auto 20px auto;
+    display: block;
+  }
+  .header-contactus{
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+  }
+  .wpcf7-spinner{
+    position: absolute;
+  }
+  .wpcf7-not-valid-tip {
+    font-size: 1em;
+    font-weight: normal;
+    display: block;
+    background: #dc3232;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+  }
+   form {
+     &.sent {
+
+       .wpcf7-response-output {
+         background: #46b450;
+         color: #fff;
+         position: inherit;
+         text-align: center;
+         margin: 0px;
+         border-radius: 10px;
+       }
+
+       .freshcode-from {
+         display: none;
+       }
+     }
+     &.failed{
+       .wpcf7-response-output {
+         display:none ;
+       }
+     }
+   }
+   input , textarea{
+    border-radius: 10px;
+    border-width: 3px;
+    margin-top: 10px;
+
+  } textarea {
+    resize: none;
+    height: 80px;
+  }
+}

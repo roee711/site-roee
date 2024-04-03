@@ -1,0 +1,37 @@
+.freshcode-fullpage {
+  .post-section {
+    .av-container {
+      max-width: 2000px;
+      padding: 0px;
+    }
+  }
+  .wp-block-columns-is-layout-flex {
+    max-width: 1170px;
+    margin: 0px auto;
+    padding: 0 65px;
+
+  }
+   .freshcode-full-page-section {
+     &.wp-block-columns-is-layout-flex {
+       max-width: 100%;
+       padding: 30px 0px;
+       background: var(--sp-gradient1);
+       &.freshcode-about{
+         padding: 30px ;
+         .wp-block-buttons{
+           justify-content: center;
+         }
+       }
+     }
+   }
+   .av-py-default{
+     &:not(.freshcode-fullpage.home .av-py-default) {
+       padding: 0px;
+     }
+  }
+  .wp-block-contact-form-7-contact-form-selector{
+    display: flex;
+    justify-content: center;
+
+  }
+}

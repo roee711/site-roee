@@ -114,7 +114,7 @@ if(!function_exists('freshcode_breadcrumbs')){
             if ( is_category() ) {
                 $thisCat = get_category( get_query_var( 'cat' ), false );
                 if ( $thisCat->parent != 0 ) {
-                    echo get_category_parents( $thisCat->parent, true, ' ' . ' ' );
+                    echo get_category_parents( $thisCat->parent, true,  ' - '  );
                 }
                 echo $before . single_cat_title( '', false ) . $after;
 
@@ -205,6 +205,14 @@ if(!function_exists('freshcode_breadcrumbs')){
 if(!function_exists('freshcode_script_footer')){
 
     function freshcode_script_footer(){ ?>
+        <div class="freshcode-connection">
+            <a href="tel:0502052837">
+                <i class="fa fa-whatsapp"></i>
+            </a>
+            <a href="mailto:info@freshcode.com">
+                <i class="fa fa-envelope"></i>
+            </a>
+        </div>
         <script>
             let scrollLink =document.querySelectorAll('.post-content ul li a')
             scrollLink.forEach((link)=>link.addEventListener("click", function(e) {
@@ -218,6 +226,7 @@ if(!function_exists('freshcode_script_footer')){
         </script>
 
     <?php }
+    add_action('wp_footer','freshcode_script_footer');
 }
 if(!function_exists('freshcode_create_custom_post_type')){
     function freshcode_create_custom_post_type($nameSingle,$namePlural,$fields){
@@ -300,9 +309,80 @@ if(!function_exists('freshcode_insert_body_class')){
     }
     add_filter('body_class', 'freshcode_insert_body_class');
 }
+if(!function_exists('wpcf7_custom_reponse_html')) {
+    add_filter( 'wpcf7_form_response_output', 'wpcf7_custom_reponse_html', 99, 1 );
+    function wpcf7_custom_reponse_html( $html ) {
+        $html = "<span>".$html."</span>";
+        return $html;
+    }
+}
+if(!function_exists('freshcode_disable_comments_post_types_support')) {
+    function freshcode_disable_comments_post_types_support()
+    {
+        $post_types = get_post_types();
+        foreach ($post_types as $post_type) {
+            if (post_type_supports($post_type, 'comments')) {
+                remove_post_type_support($post_type, 'comments');
+                remove_post_type_support($post_type, 'trackbacks');
+            }
+        }
+    }
 
-add_filter( 'wpcf7_form_response_output', 'wpcf7_custom_reponse_html', 99, 1 );
-function wpcf7_custom_reponse_html( $html ) {
-    $html = "<span>".$html."</span>";
-    return $html;
+    add_action('admin_init', 'freshcode_disable_comments_post_types_support');
+}
+if(!function_exists('freshcode_disable_comments_status')) {
+    function freshcode_disable_comments_status()
+    {
+        return false;
+    }
+
+    add_filter('comments_open', 'freshcode_disable_comments_status', 20, 2);
+    add_filter('pings_open', 'freshcode_disable_comments_status', 20, 2);
+}
+if(!function_exists('freshcode_disable_comments_hide_existing_comments')) {
+    function freshcode_disable_comments_hide_existing_comments($comments)
+    {
+        $comments = array();
+        return $comments;
+    }
+    add_filter('comments_array', 'freshcode_disable_comments_hide_existing_comments', 10, 2);
+}
+if(!function_exists('freshcode_disable_comments_admin_menu')) {
+
+    function freshcode_disable_comments_admin_menu()
+    {
+        remove_menu_page('edit-comments.php');
+    }
+    add_action('admin_menu', 'freshcode_disable_comments_admin_menu');
+}
+if(!function_exists('freshcode_disable_comments_admin_menu_redirect')) {
+    function freshcode_disable_comments_admin_menu_redirect()
+    {
+        global $pagenow;
+        if ($pagenow === 'edit-comments.php') {
+            wp_redirect(admin_url());
+            exit;
+        }
+    }
+    add_action('admin_init', 'freshcode_disable_comments_admin_menu_redirect');
+}
+if(!function_exists('freshcode_disable_comments_dashboard')) {
+
+    function freshcode_disable_comments_dashboard()
+    {
+        remove_meta_box('dashboard_recent_comments', 'dashboard', 'normal');
+    }
+    add_action('admin_init', 'freshcode_disable_comments_dashboard');
+}
+if(!function_exists('freshcode_disable_comments_admin_bar')) {
+
+// Remove comments links from admin bar
+    function freshcode_disable_comments_admin_bar()
+    {
+        if (is_admin_bar_showing()) {
+            remove_action('admin_bar_menu', 'wp_admin_bar_comments_menu', 60);
+        }
+    }
+
+    add_action('init', 'freshcode_disable_comments_admin_bar');
 }

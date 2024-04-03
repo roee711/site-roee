@@ -39,7 +39,7 @@ $marin_blog_content_ordering = get_theme_mod( 'marin_blog_content_ordering', arr
 				<?php
 			elseif ( 'title' === $marin_blog_content_order ) :
 
-				the_title( '<h5 class="post-title">', '</h5>' );
+			//	the_title( '<h5 class="post-title">', '</h5>' );
 				?>
 
 				<?php

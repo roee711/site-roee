@@ -1,0 +1,13 @@
+@function rgb-($color, $alpha: 100%) {
+  @if(str-length($color) > 0) {
+    @return "rgb(#{$color} / #{$alpha})";
+  }
+  @error "$color is invalid.";
+}
+
+@function rgb--($string) {
+  @if(str-length($string) > 0) {
+    @return "rgb(#{$string})";
+  }
+  @error "$string is invalid.";
+}
