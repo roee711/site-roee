@@ -1,7 +1,10 @@
-/*
- Theme Name:     Marin child
- Template:       Marin
-*/
+/**
+ * Theme Name:     Marin Child
+ * Author:         roee parash
+ * Template:       marin
+ * Text Domain:	   freshcode
+ * Description:    Lightning Fast Speed &amp; Elegant Theme. Marin is a responsive and fully customizable theme to create any kind of websites. The advanced admin panel will enable you to customize it without any technical knowledge. This theme is lightweight, it will enable you to create almost any type of website such a blog, portfolio, acting and shooting industry, total trendy news, newspaper, mega magazine, fashion, dark themes, petcare, animals wildlife, wooden architecture, plumbing contractor, painting estate, interior design, rooms furniture, home decoration, green floral nature, construction, corporate, multiple agency, business promotion, dark variation, industries, Beauty &amp; spa salons, photography, gym, fitness, health, medical, startups, business agencies, law firms, travel, NGO, charity, yoga, kids education, training institute, university portal, restaurant, meta shop, quick magazines, mutual fund, finance, accounting, consulting ,travel agency website. Theme is fully compatible with popular WordPress plugins like Elementor Page Builder, Slider, Carousal, Beaver Builder, Brizy, Visual Composer, Divi, SiteOrigin, Gutenberg, Block-Enabled, WooCommerce, WPML, Yoast SEO, Shortcode, Jetpack, Contact Form 7, Mailchimp for WordPress, bbPress, Demo Importer, WPForms and more. Your WordPress website will never be let down with this theme. Live Demo https://wpfrank.com/demo/marin/
+ **/
 * {
     list-style: none;
     text-decoration: none; }
@@ -28,7 +31,8 @@ body {
 body .av-btn i {
     rotate: 180deg;
     margin-right: 12px;
-    margin-left: -5px; }
+    margin-left: -5px;
+    float: left; }
 body .post-content {
     position: initial; }
 
@@ -137,20 +141,24 @@ body .freshcode-btn-black a {
 .wp-block-latest-posts__post-excerpt {
     margin-bottom: 4rem; }
 
+.freshcode-fullpage #av-primary-content {
+    margin-bottom: 0px; }
 .freshcode-fullpage .post-section .av-container {
     max-width: 2000px;
     padding: 0px; }
-.freshcode-fullpage .wp-block-columns-is-layout-flex {
+.freshcode-fullpage .is-layout-flex {
     max-width: 1170px;
     margin: 0px auto;
     padding: 0 65px; }
-.freshcode-fullpage .freshcode-full-page-section.wp-block-columns-is-layout-flex {
+.freshcode-fullpage .freshcode-full-page-section.is-layout-flex {
     max-width: 100%;
     padding: 30px 0px;
-    background: var(--sp-gradient1); }
-.freshcode-fullpage .freshcode-full-page-section.wp-block-columns-is-layout-flex.freshcode-about {
+    background: var(--sp-gradient1);
+    margin-top: 20px; }
+.freshcode-fullpage .freshcode-full-page-section.is-layout-flex.freshcode-about {
+    margin-top: 0px;
     padding: 30px; }
-.freshcode-fullpage .freshcode-full-page-section.wp-block-columns-is-layout-flex.freshcode-about .wp-block-buttons {
+.freshcode-fullpage .freshcode-full-page-section.is-layout-flex.freshcode-about .wp-block-buttons {
     justify-content: center; }
 .freshcode-fullpage .av-py-default:not(.freshcode-fullpage.home .av-py-default) {
     padding: 0px; }
@@ -284,8 +292,6 @@ body.single #breadcrumb-section.breadcrumb-right .breadcrumb-list:before {
 
 .home .av-py-default {
     padding-bottom: 0px; }
-.home #av-primary-content {
-    margin-bottom: 0px; }
 
 .archive .post-content .post-date, .single .post-content .post-date {
     position: absolute;
@@ -493,8 +499,22 @@ pre[class*="language-"].freshcode-code-box code {
     .freshcode-header {
         font-size: 30px; }
 
-    .freshcode-fullpage .wp-block-columns-is-layout-flex {
-        padding: 0px 20px; } }
+    .freshcode-fullpage .is-layout-flex,
+    .freshcode-fullpage .freshcode-full-page-section.is-layout-flex,
+    .freshcode-fullpage .freshcode-full-page-section.is-layout-flex.freshcode-about {
+        padding: 20px 20px; }
+
+    body .av-columns-area {
+        margin: 0px; }
+
+    body [class*="av-column-"] {
+        padding: 0px; }
+
+    body .post-items[class*="av-column-"] {
+        padding-bottom: 60px; }
+
+    body .scrollup {
+        bottom: 80px; } }
 @media screen and (max-width: 580px) {
     .logo a, .mobile-logo a, .site-title {
         font-size: 24px; }

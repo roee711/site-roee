@@ -1,22 +1,27 @@
 .freshcode-fullpage {
+  #av-primary-content {
+    margin-bottom: 0px;
+  }
   .post-section {
     .av-container {
       max-width: 2000px;
       padding: 0px;
     }
   }
-  .wp-block-columns-is-layout-flex {
+  .is-layout-flex {
     max-width: 1170px;
     margin: 0px auto;
     padding: 0 65px;
 
   }
    .freshcode-full-page-section {
-     &.wp-block-columns-is-layout-flex {
+     &.is-layout-flex {
        max-width: 100%;
        padding: 30px 0px;
        background: var(--sp-gradient1);
+       margin-top: 20px;
        &.freshcode-about{
+         margin-top: 0px;
          padding: 30px ;
          .wp-block-buttons{
            justify-content: center;

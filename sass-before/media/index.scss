@@ -102,10 +102,27 @@
   .freshcode-header{
     font-size: 30px;
   }
-  .freshcode-fullpage .wp-block-columns-is-layout-flex{
-    padding: 0px 20px;
+  .freshcode-fullpage {
+    .is-layout-flex ,
+    .freshcode-full-page-section.is-layout-flex,
+    .freshcode-full-page-section.is-layout-flex.freshcode-about{
+      padding: 20px 20px;
+    }
+
   }
 
+  body .av-columns-area{
+    margin: 0px;
+  }
+  body [class*="av-column-"]{
+    padding: 0px;
+  }
+  body .post-items[class*="av-column-"]{
+    padding-bottom: 60px;
+  }
+  body .scrollup{
+    bottom: 80px;
+  }
 }
 
 @media screen and (max-width: 580px){
