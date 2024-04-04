@@ -1,5 +1,3 @@
-
-/*================== all page ==================*/
 *{
   list-style: none;
   text-decoration:none;
@@ -22,15 +20,24 @@
 body {
   text-align: right;
   direction: rtl;
+  /*.av-columns-area  [class*='av-column-']{
+    margin-bottom: 0px;
+  }*/
+  .av-btn i{
+    rotate:180deg;
+    margin-right: 12px;
+    margin-left: -5px;
+    float: left;
+  }
+  .post-content{
+    position: initial;
+  }
 }
 
 a ,a:hover{
   text-decoration:none;
   text-decoration-style: inherit;
 
-}
-.av-columns-area{
-  margin-bottom: 0px;
 }
 .flex-item{
   display: flex;
@@ -128,7 +135,7 @@ a ,a:hover{
 }
 #freshcode_list_recommendations .post-items{
     justify-content: flex-start;
-    padding-bottom: 40px;
+    padding-bottom: 60px;
   &.av-column-4{
     flex: 0 0 32.333333%;
   }
@@ -137,7 +144,7 @@ a ,a:hover{
 body{
   .post-items {
     justify-content: flex-start;
-    padding-bottom: 40px;
+    padding-bottom:60px;
 
     p {
       margin: 5px 0px;

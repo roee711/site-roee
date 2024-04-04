@@ -102,6 +102,10 @@
   .freshcode-header{
     font-size: 30px;
   }
+  .freshcode-fullpage .wp-block-columns-is-layout-flex{
+    padding: 0px 20px;
+  }
+
 }
 
 @media screen and (max-width: 580px){
@@ -118,9 +122,7 @@
   pre[class*="language-"].freshcode-code-box{
     background: #f5f2f0;
   }
-  .post-content {
-    padding: 15px;
-  }
+
   #breadcrumb-section{
     padding: 0px;
   }

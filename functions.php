@@ -11,7 +11,7 @@ if(!function_exists('freshcode_enqueue_child_style_and_js')){
     function freshcode_enqueue_child_style_and_js() {
         wp_enqueue_style( 'child-style-prism', get_stylesheet_directory_uri().'/assets/css/prism.css',array(),mt_rand(10000, 99999) );
         wp_enqueue_script( 'child-js-prism', get_stylesheet_directory_uri().'/assets/js/prism.js',array(),mt_rand(10000, 99999) ,array('in_footer'=>true));
-        wp_enqueue_style( 'child-style-code', get_stylesheet_directory_uri().'/sass-after/style.css',array(),mt_rand(10000, 99999) );
+      //  wp_enqueue_style( 'child-style-code', get_stylesheet_directory_uri().'/sass-after/style.css',array(),mt_rand(10000, 99999) );
     }
     add_action( 'wp_enqueue_scripts', 'freshcode_enqueue_child_style_and_js' );
 }
