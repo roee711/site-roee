@@ -479,7 +479,10 @@ pre[class*="language-"].freshcode-code-box {
     font-size: 22px; } }
 @media screen and (max-width: 767px) {
   .freshcode-connection {
-    display: flex; } }
+    display: flex; }
+
+  .freshcode-header {
+    font-size: 30px; } }
 @media screen and (max-width: 580px) {
   .logo a, .mobile-logo a, .site-title {
     font-size: 24px; }
